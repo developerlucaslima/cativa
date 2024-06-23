@@ -25,6 +25,4 @@ app.use((error: Error, _: Request, response: Response) => {
   })
 })
 
-app.listen(PORT, () =>
-  console.log(`⚒️ O servidor esta rodando na porta ${PORT}`),
-)
+app.listen(PORT, () => console.log(`⚒️ Server is running on port ${PORT}`))
