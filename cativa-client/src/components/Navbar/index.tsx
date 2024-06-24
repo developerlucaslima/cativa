@@ -9,7 +9,14 @@ export const Navbar = () => {
   return (
     <section className={styles.container}>
       <div className={styles.wrapper}>
-        <div style={{ marginTop: '-rem' }}>Logo</div>
+        <div style={{ marginTop: '-rem' }}>
+          <a href="/">
+            <img
+              src="https://www.cativaoperadora.com.br/images/logo.png"
+              alt="logo"
+            />
+          </a>
+        </div>
 
         <div className={styles.menu}>
           {items.map((item) => (

@@ -29,11 +29,13 @@
   gap: 1.3rem;
 
   li {
+    background-color: blue;
+    padding: 0.5rem 1.2rem;
     list-style: none;
     font-size: 1.05rem;
     font-weight: 600;
     transition: 0.3s ease-in-out;
-    color: #333;
+    color: white;
 
     &:hover {
       transform: translateY(-2px);
