@@ -1,0 +1,31 @@
+.wrapper {
+  position: relative;
+}
+
+body .input {
+  width: 100%;
+  padding: 6px 7px;
+  padding-left: 36px;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+
+  &:focus {
+    border-bottom: 1.5px solid blue;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 0.85rem;
+    padding: 7px;
+    padding-left: 36px;
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 19%;
+  left: 10px;
+  @media (max-width: 992px) {
+    top: 11%;
+  }
+}
