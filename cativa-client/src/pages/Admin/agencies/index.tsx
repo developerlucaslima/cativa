@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
-import { Navbar } from '../../../components/Navbar'
-import { NavbarMobile } from '../../../components/NavbarMobile'
-import { Search } from '../../../components/Search'
-import { TableAgencies } from '../../../components/TableAgencies'
+import { ListAgencies } from '../../../components/list-agencies'
+import { Navbar } from '../../../components/navbar'
+import { NavbarMobile } from '../../../components/navbar-mobile'
+import { Search } from '../../../components/search'
 import { useGetAgencies } from '../../../hooks/useGetAgencies'
 import { Agency } from '../../../types/agency.type'
 import styles from './style.module.scss'
@@ -21,11 +21,11 @@ export const Agencies = () => {
           <Search
             data={data}
             setFiltered={setFiltered}
-            placeholder="Procurar..."
+            placeholder="Pesquisar por nome..."
           />
         </div>
         <div className={styles.tableContainer}>
-          <TableAgencies data={data} filtered={filtered} />
+          <ListAgencies data={data} filtered={filtered} />
         </div>
       </div>
     </>
