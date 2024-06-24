@@ -1,13 +1,8 @@
 import { Request, Response } from 'express'
 import { sqliteConnection } from '@/database/sqlite'
 
-interface ExpressTypes {
-  request: Request
-  response: Response
-}
-
 export class AgenciesController {
-  async create({ request, response }: ExpressTypes) {
+  async create(request: Request, response: Response) {
     const database = await sqliteConnection()
 
     const { name, email, phone, website } = request.body
@@ -28,7 +23,7 @@ export class AgenciesController {
     return response.status(201).json({ message: 'Agency added successfully' })
   }
 
-  async update({ request, response }: ExpressTypes) {
+  async update(request: Request, response: Response) {
     const database = await sqliteConnection()
 
     const { id } = request.params
@@ -50,7 +45,7 @@ export class AgenciesController {
     return response.status(200).json({ message: 'Agency updated successfully' })
   }
 
-  async delete({ request, response }: ExpressTypes) {
+  async delete(request: Request, response: Response) {
     const database = await sqliteConnection()
 
     const { id } = request.params
@@ -68,7 +63,7 @@ export class AgenciesController {
     return response.status(204).json({ message: 'Agency deleted successfully' })
   }
 
-  async getById({ request, response }: ExpressTypes) {
+  async getById(request: Request, response: Response) {
     const database = await sqliteConnection()
 
     const { id } = request.params
@@ -83,7 +78,8 @@ export class AgenciesController {
     return response.status(200).json(agency)
   }
 
-  async getAll(response: Response) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  async getAll(request: Request, response: Response) {
     const database = await sqliteConnection()
 
     const agencies = await database.all('SELECT * FROM agencies')
