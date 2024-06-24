@@ -82,4 +82,12 @@ export class AgenciesController {
 
     return response.status(200).json(agency)
   }
+
+  async getAll(response: Response) {
+    const database = await sqliteConnection()
+
+    const agencies = await database.all('SELECT * FROM agencies')
+
+    return response.status(200).json(agencies)
+  }
 }
