@@ -2,11 +2,13 @@ import express, { Request, Response } from 'express'
 import { routes } from './routes'
 import { sqliteConnection } from './database/sqlite'
 import { AppError } from './error/app-error'
+import cors from 'cors'
 
 sqliteConnection()
 const app = express()
 const PORT = 3000
 app.use(express.json())
+app.use(cors())
 app.use(routes)
 
 app.use((error: Error, _: Request, response: Response) => {
