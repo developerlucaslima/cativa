@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { IoCloseCircleOutline } from 'react-icons/io5'
 import { useNavigate } from 'react-router-dom'
 
-import Loader from '../../../components/Loader'
+import Loader from '../../../components/loader'
 import { notify } from '../../../components/Toast'
 import { api } from '../../../services/api'
 import { Agency } from '../../../types/agency.type'
@@ -45,7 +45,7 @@ export const AddAgency = () => {
 
       try {
         await api.post(`/agencies/add`, agency)
-        notify({ type: 'success', message: 'Associado Adicionado!' })
+        notify({ type: 'success', message: 'Agência adicionada!' })
         setIsLoading(false)
         setError(false)
         navigate('/')
@@ -69,7 +69,7 @@ export const AddAgency = () => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <h1 style={{ color: '#333', margin: '0' }}>Novo parceiro</h1>
+        <h1 style={{ color: '#333', margin: '0' }}>Nova agência</h1>
 
         <label className={styles.label} htmlFor="name">
           Nome
