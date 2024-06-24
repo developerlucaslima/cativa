@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { IoCloseCircleOutline } from 'react-icons/io5'
 import { useNavigate, useParams } from 'react-router-dom'
 
-import Loader from '../../../components/Loader'
+import Loader from '../../../components/loader'
 import { notify } from '../../../components/Toast'
 import { useGetAgencyById } from '../../../hooks/useGetAgencyById'
 import { api } from '../../../services/api'
@@ -60,7 +60,7 @@ export const UpdateAgency = () => {
         notify({ type: 'success', message: 'Agência atualizada com sucesso!' })
         setIsLoading(false)
         setError(false)
-        navigate('/associados')
+        navigate('/')
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (error: any) {
         notify({
