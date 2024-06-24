@@ -1,0 +1,13 @@
+.wrapper {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 100%;
+}
+
+.tableContainer {
+  @media (max-width: 992px) {
+    overflow: scroll;
+  }
+}
