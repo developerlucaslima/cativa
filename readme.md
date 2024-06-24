@@ -1,4 +1,4 @@
-# Instruções para executar essa aplicação
+# Instruções para executar aplicação
 
 ### Requisitos mínimos
 - Node.js
